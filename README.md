@@ -1,3 +1,33 @@
+# Real-Time ECG Acquisition & Data Processing 🏥⚡
+
+## 📌 Project Overview
+This project focuses on the end-to-end development of a biomedical system designed to acquire raw ECG signals from the human body, filter noise in real-time, and perform spectral analysis. It bridges the gap between **Analog Circuit Design** and **Digital Signal Processing (DSP)**.
+
+
+
+## 🛠 Engineering Workflow
+- **Signal Acquisition:** Captured via a three-electrode configuration using an **AD620 Instrumentation Amplifier** for high common-mode rejection.
+- **Analog Filtering:** Implemented an active low-pass filter with a **13 Hz cutoff frequency** to eliminate high-frequency artifacts and a capacitor-based high-pass stage to remove baseline wander.
+- **Data Conversion:** Used an **Arduino Nano** as a 500 Hz ADC, transmitting data via Bluetooth (HC-06).
+- **Digital Processing:** Developed a **MATLAB App Designer** interface for real-time FFT monitoring and peak detection.
+
+## 🚀 Key Technical Features
+- **Real-Time FFT:** Continuous frequency domain analysis to monitor signal quality.
+- **Heart Rate Variability (HRV):** Calculation of average BPM and R-R tachogram generation.
+- **Power Spectral Density (PSD):** Advanced analysis of the R-R intervals for physiological insights.
+
+
+
+## ▶️ How to Run
+1. **Hardware:** Connect the AD620 circuit as per the provided schematic.
+2. **Firmware:** Upload the Arduino sketch found in the `/Software` directory.
+3. **Software:** Launch the MATLAB executable or run the source code in the MATLAB environment.
+
+---
+### 🙌 Acknowledgements & Credits
+This project is an implementation and enhancement based on original research by **M. M. Cosdu, Samet Oguten, and Bilal Kabas**. I have documented and structured this repository to highlight practical ECE implementation techniques.
+
+
 # ECG Signal Acquisition and Data Processing Circuit and Software Development
 [![MATLAB Version](https://img.shields.io/badge/MATLAB-R2019b-%234285F4?style=flat-square)](https://ch.mathworks.com/products/new_products/latest_features.html)
 [![license](https://img.shields.io/badge/license-AGPL%203.0-%23F65314?style=flat-square)](LICENSE)
